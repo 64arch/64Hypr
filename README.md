@@ -5,3 +5,6 @@
 
 ### Kitty (+ Fish)
 ![img](kitty.png)
+
+### Wofi
+![img](wofi.png)
