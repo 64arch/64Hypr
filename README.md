@@ -1,4 +1,4 @@
 ## Config for hyprland
 
 ### Waybar
-[!img](waybar.png)
+![img](waybar.png)
