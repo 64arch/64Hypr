@@ -1,0 +1,32 @@
+{
+    "label" : "lock",
+    "action" : "sleep 1; hyprlock",
+    "text" : "",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action" : "$HOME/dotfiles/hypr/scripts/exit.sh",
+    "text" : "",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "sleep 1; systemctl poweroff",
+    "text" : "",
+    "keybind" : "s"
+}
+{
+    "label" : "suspend",
+    "action" : "sleep 1; systemctl suspend",
+    "text" : "",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "sleep 1; systemctl reboot",
+    "text" : "",
+    "keybind" : "r"
+}
+
+

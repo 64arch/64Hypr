@@ -8,3 +8,6 @@
 
 ### Wofi
 ![img](wofi.png)
+
+### Wlogout
+![img](wlogout.png)
