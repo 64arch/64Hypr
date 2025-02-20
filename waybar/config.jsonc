@@ -9,22 +9,24 @@
     "margin-left": 8,
 
     "modules-left": [
+        "custom/logo",
         "hyprland/workspaces"
     ],
 
+
     "modules-center": [
-        "clock"
+        "cpu",
+        "memory",
     ],
 
     "modules-right": [
-        "hyprland/language",
-        "tray",
         "cpu_text",
-        "cpu",
-        "memory",
-        "network",
         "pulseaudio",
+        "hyprland/language",
+        "clock",
+        "network",
         "custom/power",
+        "tray"
     ],
 
     "custom/power": {
@@ -35,18 +37,27 @@
         "on-click-right": "hyprctl dispatch exit"
     },
 
+    "custom/logo": {
+        "format": " "
+    },
+
     "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": "○"
-      },
+        "active": "",
+    },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 4, // 5 workspaces by default on every monitor
-        "HDMI-A-1": 3 // but only three on HDMI-A-1
+        "*": 4,
+        "HDMI-A-1": 3
       }
     },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
 
     "tray": {
         "spacing": 10,
@@ -54,12 +65,13 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p - %a, %d %b %Y}",
-        "tooltip": false
+        "format": "  {:%H:%M %p}",
+        "tooltip": true,
+        "tooltip-format": "{:%A, %d %B %Y\n%H:%M}"
     },
 
     "cpu": {
-        "format": "cpu {usage}%",
+        "format": "  {usage}%",
         "interval": 2,
 
         "states": {
@@ -68,7 +80,7 @@
     },
 
     "memory": {
-        "format": "mem {percentage}%",
+        "format": " {percentage}%",
         "interval": 2,
 
         "states": {
@@ -76,20 +88,10 @@
         }
     },
 
-    "battery": {
-        "format": "bat {capacity}%",
-        "interval": 5,
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
-        "tooltip": false
-    },
-
     "network": {
-        "format-wifi" : "wifi {bandwidthDownBits}",
-        "format-ethernet": "enth {bandwidthDownBits}",
-        "format-disconnected" : "no network",
+        "format-wifi": "  {bandwidthDownBits}",
+        "format-ethernet": " {bandwidthDownBits}",
+        "format-disconnected": " No Network",
         "interval": 5,
         "tooltip": false
     },
@@ -97,7 +99,11 @@
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
-        "format": "vol {volume}%",
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": " ",
+            "muted": ""
+        },
         "format-bluetooth": "vol {volume}%",
         "nospacing": 1,
         "on-click": "pavucontrol",
