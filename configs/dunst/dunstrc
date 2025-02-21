@@ -1,0 +1,39 @@
+[global]
+    font = "JetBrains Mono Bold 11"
+    frame_width = 3
+    frame_color = "#1b1f26"
+    corner_radius = 10
+    transparency = 10
+    separator_color = "#FFAFCC"
+    idle_threshold = 120
+
+    # 🖼 Позиция уведомлений
+    origin = top-right
+    offset = 25x25
+
+    # 🏠 Размеры
+    width = 320
+    height = 120
+    padding = 10
+    horizontal_padding = 10
+
+    # 📌 Формат текста
+    format = "<b>%s</b>\n<b><i>%b</i></b>"
+
+[urgency_normal]
+    background = "#1b1f26"
+    foreground = "#64B5F6"
+    timeout = 10
+    underline_color = "#A0E1A0"
+
+[urgency_low]
+    background = "#1b1f26"
+    foreground = "#7986CB"
+    timeout = 8
+    underline_color = "#B3E5FC"
+
+[urgency_critical]
+    background = "#1b1f26"
+    foreground = "#D32F2F"
+    timeout = 0
+    frame_color = "#E57373"

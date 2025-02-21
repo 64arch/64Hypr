@@ -65,9 +65,9 @@
     },
 
     "clock": {
-        "format": "  {:%H:%M %p}",
-        "tooltip": true,
-        "tooltip-format": "{:%A, %d %B %Y\n%H:%M}"
+        "format": "{:%H:%M %p}",
+        "format-alt": "{:%A, %d %B %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
     "cpu": {
