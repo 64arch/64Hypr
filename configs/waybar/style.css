@@ -1,9 +1,9 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrains Mono", "Font Awesome 5 Free", sans-serif;
-    font-size: 14px;
-    min-height: 0;
+border: none;
+border-radius: 12px;
+font-family: "JetBrains Mono", "Font Awesome 5 Free", sans-serif;
+font-size: 14px;
+min-height: 0;
 }
 
 window#waybar {
@@ -13,51 +13,60 @@ window#waybar {
     border: 2px solid #64B5F6;
     transition-property: background-color;
     transition-duration: .5s;
-    padding: 4px 8px;
+    padding: 4px 8px; /* Added panel padding */
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
+#custom-cava_visualizer {
+    font-size: 14px;
+    font-weight: bold;
+    color: #85C1E9;
+    min-width: 100px;
+    letter-spacing: -1px;
+}
+
+
 #workspaces {
-    background-color: #1B1F26;
-    border-radius: 12px;
-    margin: 4px;
-    padding: 4px 6px;
+background-color: #1B1F26;
+border-radius: 12px;
+margin: 4px;
+padding: 4px 6px; /* Increased padding */
 }
 
 #workspaces button {
-    padding: 0 8px;
-    background-color: transparent;
-    color: #64B5F6;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    margin: 0 2px;
+padding: 0 8px; /* Increased button padding */
+background-color: transparent;
+color: #64B5F6;
+border-radius: 12px;
+transition: all 0.3s ease;
+margin: 0 2px; /* Added margin between buttons */
 }
 
 #workspaces button:hover {
-    background: rgba(100, 181, 246, 0.2);
-    box-shadow: inherit;
-    text-shadow: inherit;
+background: rgba(100, 181, 246, 0.2);
+box-shadow: inherit;
+text-shadow: inherit;
 }
 
 #workspaces button.active {
-    background-color: #64B5F6;
-    color: #1B1F26;
-    border-radius: 12px;
+background-color: #64B5F6;
+color: #1B1F26;
+border-radius: 12px;
 }
 
 #workspaces button.urgent {
-    background-color: #E57373;
-    color: #1B1F26;
+background-color: #E57373;
+color: #1B1F26;
 }
 
 #custom-logo {
-    margin-left: 8px;
-    font-size: 18px;
-    color: #64B5F6;
-    padding: 0 10px;
+margin-left: 8px;
+font-size: 18px;
+color: #64B5F6;
+padding: 0 10px; /* Increased padding */
 }
 
 #clock,
@@ -68,66 +77,66 @@ window#waybar.hidden {
 #tray,
 #custom-power,
 #language {
-    background-color: #1B1F26;
-    padding: 0 14px;
-    margin: 4px 3px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    min-width: 20px;
+background-color: #1B1F26;
+padding: 0 14px; /* Increased padding */
+margin: 4px 3px; /* Increased margin */
+border-radius: 12px;
+transition: all 0.3s ease;
+min-width: 20px; /* Added minimum width */
 }
 
 #clock {
-    color: #90CAF9;
+color: #90CAF9;
 }
 
 #cpu {
-    color: #606099;
+color: #606099;
 }
 
 #memory {
-    color: #c19d72;
+color: #c19d72;
 }
 
 #network {
-    color: #838c78;
+color: #838c78;
 }
 
 #pulseaudio {
-    color: #865969;
+color: #865969;
 }
 
 #language {
-    color: #64B5F6;
+color: #64B5F6;
 }
 
 #custom-power {
-    color: #E57373;
-    margin-right: 8px;
+color: #E57373;
+margin-right: 8px;
 }
 
 #tray {
-    margin-right: 8px;
-    padding: 0 10px;
+margin-right: 8px;
+padding: 0 10px; /* Added padding */
 }
 
-#tray>.passive {
-    -gtk-icon-effect: dim;
+#tray > .passive {
+-gtk-icon-effect: dim;
 }
 
-#tray>.needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #E57373;
+#tray > .needs-attention {
+-gtk-icon-effect: highlight;
+background-color: #E57373;
 }
 
 #cpu.critical,
 #memory.critical {
-    background-color: #E57373;
-    color: #1B1F26;
+background-color: #E57373;
+color: #1B1F26;
 }
 
 #network.disconnected {
-    background-color: #E57373;
-    color: #1B1F26;
+background-color: #E57373;
+color: #1B1F26;
 }
 
 @keyframes blink {
@@ -140,9 +149,9 @@ window#waybar.hidden {
 #cpu.critical,
 #memory.critical,
 #network.disconnected {
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+animation-name: blink;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
 }

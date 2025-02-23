@@ -11,7 +11,7 @@ makepkg -si
 
 Packages:
 ```
-yay -S --noconfirm waybar dunst ttf-font-awesome ttf-jetbrains-mono fastfetch wofi wlogout fish hyprpaper ttf-jetbrains-mono-nerd nwg-look thunar unzip xarchiver
+yay -S --noconfirm waybar dunst ttf-font-awesome ttf-jetbrains-mono fastfetch wofi wlogout fish hyprpaper ttf-jetbrains-mono-nerd nwg-look thunar unzip xarchiver cava playerctl jq
 ```
 
 Theme (change in nwg-look):
@@ -31,6 +31,11 @@ Repo:
 git clone https://github.com/64arch/64Hypr.git
 cd 64Hypr
 cp -r ./configs/* ~/.config/
+```
+
+Cava for waybar:
+```
+chmod +x ~/.config/waybar/scripts/cava_visualizer.sh
 ```
 
 ### Waybar

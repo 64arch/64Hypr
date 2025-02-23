@@ -10,7 +10,8 @@
 
     "modules-left": [
         "custom/logo",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+         "custom/cava_visualizer"
     ],
 
 
@@ -19,6 +20,13 @@
         "memory",
     ],
 
+    "custom/cava_visualizer": {
+        "exec": "~/.config/waybar/scripts/cava_visualizer.sh",
+        "return-type": "json",
+        "interval": 0.1,
+        "format": "{}",
+        "tooltip": false
+    },
     "modules-right": [
         "cpu_text",
         "pulseaudio",
